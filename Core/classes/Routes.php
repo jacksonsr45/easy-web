@@ -7,27 +7,19 @@ use Core\services\Container;
 class Routes
 {
     private $routes;
-
-    public function __construct(array $routes)
-    {
-        $this->setRoutes($routes);
-        $this->run();
-    }
     
     /**
      * recebe valor de rotas 
      * e converte para newRoutes em 3 posições
      * Retorna $newRoutes 
     */
-    private function setRoutes($routes)
+    protected function setRoutes($route)
     {
-        foreach($routes as $route)
-        {
-            $explode = explode('@' , $route[1]);
-            $remountRoute = [$route[0], $explode[0], $explode[1]];
-            $newRoutes[] = $remountRoute;
-        }
-        $this->routes = $newRoutes;
+        $explode = explode('@' , $route[1]);
+        $remountRoute = [$route[0], $explode[0], $explode[1]];
+        $newRoutes[] = $remountRoute;
+
+        $this->routes = $newRoutes[0];
     }
     
     /**
@@ -45,7 +37,7 @@ class Routes
 
         foreach($_POST as $key => $value)
         {
-            $obj->get->$key = $value;
+            $obj->post->$key = $value;
         }
 
         return $obj;
@@ -60,11 +52,11 @@ class Routes
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
 
-    private function run()
+    protected function run()
     {
         $url = $this->getUrl();
         $urlArray = explode('/', $url);
-
+        
         foreach($this->routes as $route)
         {
             $routeArray = explode('/' , $route[0]);
@@ -86,7 +78,7 @@ class Routes
                 $controller = $route[1];
                 $action = $route[2];
                 break;
-            } 
+            }
         }
 
         if($findRoute)
