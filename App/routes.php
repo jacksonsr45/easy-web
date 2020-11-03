@@ -5,4 +5,11 @@ $route = new Route;
 /**
  * Routes
 */
-$route->get(['/', 'HomeController@index']);
+$route->create([
+    ['/', 'HomeController@index'],
+    ['/create', 'HomeController@create'],
+    ['/show/{id}', 'HomeController@show'],
+    ['/update/{id}', 'HomeController@update'],
+    ['/delete/{id}', 'HomeController@delete'],
+    ['/create-teste', 'TesteController@delete'],
+]);

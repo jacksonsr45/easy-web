@@ -6,12 +6,12 @@ use Core\classes\Routes;
 
 class Route extends Routes
 {
-    public function get(array $route)
+    public function create(array $route)
     {
-        $this->creatingMethodGet($route);
+        $this->creatingMethod($route);
     }
 
-    private function creatingMethodGet($route)
+    private function creatingMethod($route)
     {
         try {
             $this->setRoutes($route);

@@ -15,11 +15,15 @@ class Routes
     */
     protected function setRoutes($route)
     {
-        $explode = explode('@' , $route[1]);
-        $remountRoute = [$route[0], $explode[0], $explode[1]];
-        $newRoutes[] = $remountRoute;
-
-        $this->routes = $newRoutes[0];
+        for($i = 0; $i < count($route); $i++)
+        {
+            // echo $route[$i][0] . " " . $route[$i][1] . "<br>";
+            $explode = explode('@' , $route[$i][1]);
+            $remountRoute = [$route[$i][0], $explode[0], $explode[1]];
+            $newRoutes[] = $remountRoute;
+            
+        }
+        $this->routes = $newRoutes;
     }
     
     /**
@@ -37,14 +41,14 @@ class Routes
 
         foreach($_POST as $key => $value)
         {
-            $obj->post->$key = $value;
+            $obj->get->$key = $value;
         }
 
         return $obj;
     }
 
     /**
-     * Pega a url com a super global $_SERVER dentro de parse_url com o 
+     * Pega a url com a super global $_SERVER dentro de proute com o 
      * PHP_URL_PATH voltando o caminho
     */
     private function getUrl()
@@ -60,14 +64,16 @@ class Routes
         foreach($this->routes as $route)
         {
             $routeArray = explode('/' , $route[0]);
-
+            /**
+             * Corrigir erro aqui
+            */
             for($i = 0; $i < count($routeArray); $i++)
             {
                 if((strpos($routeArray[$i], "{") !==false) 
                     && (count($urlArray) == count($routeArray)))
                 {
                     $routeArray[$i] = $urlArray[$i];
-                    $param[] = $urlArray[$i]; 
+                    $param[] = $urlArray[$i];
                 }
                 $route[0] = implode( '/', $routeArray);
             }

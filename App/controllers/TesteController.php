@@ -7,28 +7,44 @@ use App\models\User;
 class TesteController extends Controller
 {
 
-    public function index()
+    public function index($requests)
     {
         require "../App/views/index.php";
+        echo "<br>";
+        echo "Index";
     }
 
-    public function create()
+    public function create($requests)
     {
-        
+        require "../App/views/index.php";
+        echo "<br>";
+        echo "Create";
     }
 
-    public function show()
+    public function show($requests, $id)
     {
-        
+        require "../App/views/index.php";
+        echo "<br>";
+        echo "id: " . $id . "Requests" . $requests;
+        echo "<br>";
+        echo "Show";
     }
 
-    public function update()
+    public function update($requests, $id)
     {
-        
+        require "../App/views/index.php";
+        echo "<br>";
+        echo "id: " . $id . "Requests" . $requests;
+        echo "<br>";
+        echo "Update";
     }
 
-    public function delete()
+    public function delete($requests, $id)
     {
-        
+        require "../App/views/index.php";
+        echo "<br>";
+        echo "id: " . $id . "Requests" . $requests;
+        echo "<br>";
+        echo "Delete";
     }
 }
