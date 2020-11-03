@@ -13,7 +13,6 @@ abstract class AbstractModel {
     
     public function index()
     {
-        var_dump($this->connection);
         $sql = "select * from {$this->table}";
         $list = $this->connection->prepare($sql);
         $list->execute();

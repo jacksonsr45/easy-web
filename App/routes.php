@@ -1,8 +1,8 @@
 <?php
 
-$route = [
-    ['/', 'HomeController@index'],
-    ['/teste/{id}/show', 'TesteController@show']
-];
-
-return $route;
+use Core\Route;
+$route = new Route;
+/**
+ * Routes
+*/
+$route->get(['/', 'HomeController@index']);
