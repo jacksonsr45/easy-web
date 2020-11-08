@@ -1,0 +1,22 @@
+{
+    "name": "MicroFramework",
+    "require": {
+        "php": ">=5.3"
+    },
+    "minimum-stability": "alpha",
+    "authors": [
+        {
+            "name": "Jackson Severino da Rocha",
+            "email": "jacksonsr45@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MicroFramework\\": "vendor/MicroFramework/",
+            "App\\": "App/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
