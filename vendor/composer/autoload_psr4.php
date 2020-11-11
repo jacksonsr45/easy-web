@@ -6,6 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'MicroFramework\\' => array($vendorDir . '/MicroFramework'),
+    'Validator\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Validator'),
+    'Route\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Route'),
+    'Response\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Response'),
+    'Request\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Request'),
+    'Provider\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Provider'),
+    'Model\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Model'),
+    'MicroFramework\\' => array($vendorDir . '/jackson_sr_45/micro-framework', $vendorDir . '/jackson_sr_45/micro-framework/jackson_sr_45/micro-framework'),
+    'Http\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Http'),
+    'Functions\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Functions'),
+    'Factory\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Factory'),
+    'Exceptions\\' => array($vendorDir . '/jackson_sr_45/micro-framework/Exceptions'),
+    'DataCollection\\' => array($vendorDir . '/jackson_sr_45/micro-framework/DataCollection'),
     'App\\' => array($baseDir . '/App'),
 );

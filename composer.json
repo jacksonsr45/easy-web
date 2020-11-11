@@ -1,18 +1,21 @@
 {
-    "name": "MicroFramework",
+    "name": "jackson_sr_45/easy-web",
+    "homepage": "https://github.com/jacksonsr45/easy-web",
     "require": {
-        "php": ">=5.3"
+        "php": ">=5.3",
+        "jackson_sr_45/micro-framework": "dev-main"
     },
     "minimum-stability": "alpha",
     "authors": [
         {
             "name": "Jackson Severino da Rocha",
-            "email": "jacksonsr45@gmail.com"
+            "email": "jacksonsr45@gmail.com",
+            "role": "Developer"
         }
     ],
     "autoload": {
         "psr-4": {
-            "MicroFramework\\": "vendor/MicroFramework/",
+            "MicroFramework\\": "vendor/jackson_sr_45/micro-framework/",
             "App\\": "App/"
         }
     },

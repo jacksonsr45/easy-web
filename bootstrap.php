@@ -1,17 +1,16 @@
 <?php
 
+use MicroFramework\Functions\Config;
 use MicroFramework\Route\Route;
 
 require_once __DIR__."/vendor/autoload.php";
-require_once __DIR__."/vendor/MicroFramework/Functions/helpers.php";
+require_once __DIR__."/vendor/jackson_sr_45/micro-framework/Functions/helpers.php";
 
 
 
 define('APP_PATH', '/my-site/app/');
 
 $route = new Route();
-
-use MicroFramework\Functions\Config;
 
 /**
  * Get Config file and run

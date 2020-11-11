@@ -7,9 +7,41 @@ namespace Composer\Autoload;
 class ComposerStaticInitdaf041d6b7970d0ba2805d28ce32764d
 {
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Validator\\' => 10,
+        ),
+        'R' => 
+        array (
+            'Route\\' => 6,
+            'Response\\' => 9,
+            'Request\\' => 8,
+        ),
+        'P' => 
+        array (
+            'Provider\\' => 9,
+        ),
         'M' => 
         array (
+            'Model\\' => 6,
             'MicroFramework\\' => 15,
+        ),
+        'H' => 
+        array (
+            'Http\\' => 5,
+        ),
+        'F' => 
+        array (
+            'Functions\\' => 10,
+            'Factory\\' => 8,
+        ),
+        'E' => 
+        array (
+            'Exceptions\\' => 11,
+        ),
+        'D' => 
+        array (
+            'DataCollection\\' => 15,
         ),
         'A' => 
         array (
@@ -18,9 +50,54 @@ class ComposerStaticInitdaf041d6b7970d0ba2805d28ce32764d
     );
 
     public static $prefixDirsPsr4 = array (
+        'Validator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Validator',
+        ),
+        'Route\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Route',
+        ),
+        'Response\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Response',
+        ),
+        'Request\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Request',
+        ),
+        'Provider\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Provider',
+        ),
+        'Model\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Model',
+        ),
         'MicroFramework\\' => 
         array (
-            0 => __DIR__ . '/..' . '/MicroFramework',
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework',
+            1 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/jackson_sr_45/micro-framework',
+        ),
+        'Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Http',
+        ),
+        'Functions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Functions',
+        ),
+        'Factory\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Factory',
+        ),
+        'Exceptions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/Exceptions',
+        ),
+        'DataCollection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jackson_sr_45/micro-framework/DataCollection',
         ),
         'App\\' => 
         array (

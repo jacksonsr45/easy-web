@@ -4,12 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55ba741f4edd7bee7eb74478687e7e0e",
-    "packages": [],
+    "content-hash": "944655e9e927fd01bc78c74ee39d9233",
+    "packages": [
+        {
+            "name": "jackson_sr_45/micro-framework",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jacksonsr45/MicroFramework.git",
+                "reference": "61421c8b25d8b9077a426b5f444e4f81cfeda49d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jacksonsr45/MicroFramework/zipball/61421c8b25d8b9077a426b5f444e4f81cfeda49d",
+                "reference": "61421c8b25d8b9077a426b5f444e4f81cfeda49d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MicroFramework\\": "jackson_sr_45/micro-framework/",
+                    "DataCollection\\": "DataCollection/",
+                    "Exceptions\\": "Exceptions/",
+                    "Factory\\": "Factory/",
+                    "Functions\\": "Functions/",
+                    "Http\\": "Http/",
+                    "Model\\": "Model/",
+                    "Provider\\": "Provider/",
+                    "Request\\": "Request/",
+                    "Response\\": "Response/",
+                    "Route\\": "Route/",
+                    "Validator\\": "Validator"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jackson Severino da Rocha",
+                    "email": "jacksonsr45@gmail.com"
+                }
+            ],
+            "homepage": "https://github.com/jacksonsr45/MicroFramework",
+            "time": "2020-11-11T17:32:13+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "alpha",
-    "stability-flags": [],
+    "stability-flags": {
+        "jackson_sr_45/micro-framework": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
