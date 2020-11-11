@@ -1,9 +1,15 @@
 <?php
 
-require_once __VENDOR__."/autoload.php";
+use MicroFramework\Route\Route;
+
+require_once __DIR__."/vendor/autoload.php";
 require_once __DIR__."/vendor/MicroFramework/Functions/helpers.php";
 
-$route = new MicroFramework\Route\Route();
+
+
+define('APP_PATH', '/my-site/app/');
+
+$route = new Route();
 
 use MicroFramework\Functions\Config;
 
@@ -14,6 +20,6 @@ use MicroFramework\Functions\Config;
 $envs = new Config;
 $envs->run();
 
-require_once __APP__."/routes.php";
+require_once __DIR__."/App/routes.php";
 
 $route->dispatch();
